@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91f9b603-cf60-4ce2-aa7c-00f07c35b671" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Task-Manager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Task-Manager.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +49,7 @@
       <option name="presentableId" value="Default" />
       <updated>1677573400434</updated>
       <workItem from="1677573401689" duration="813000" />
-      <workItem from="1677586430191" duration="1106000" />
+      <workItem from="1677586430191" duration="1554000" />
     </task>
     <servers />
   </component>
