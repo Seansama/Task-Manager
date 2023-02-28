@@ -42,4 +42,9 @@
     <orderEntry type="library" scope="PROVIDED" name="tzinfo (v2.0.6, ruby-3.0.2-p107) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="zeitwerk (v2.6.7, ruby-3.0.2-p107) [gem]" level="application" />
   </component>
+  <component name="RakeTasksCache">
+    <option name="myRootTask">
+      <RakeTaskImpl id="rake" />
+    </option>
+  </component>
 </module>
