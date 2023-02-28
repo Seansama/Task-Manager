@@ -31,3 +31,5 @@ class ApplicationController < Sinatra::Base
     task.to_json
   end
 end
+
+#testing pending for all 4 methods
