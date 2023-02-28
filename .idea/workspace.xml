@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91f9b603-cf60-4ce2-aa7c-00f07c35b671" name="Changes" comment="" />
+    <list default="true" id="91f9b603-cf60-4ce2-aa7c-00f07c35b671" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Task-Manager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Task-Manager.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +15,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2MMNH7yAGYyWKqHlJbJ0Q1FFyDZ" />
   <component name="ProjectViewState">
@@ -30,10 +36,12 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "ruby.rails.projectView.checked": "true",
+    "ruby.structure.view.model.defaults.configured": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" RAKE_SPRING_PRE_LOADER_OPTION="true" RAILS_SPRING_PRE_LOADER_OPTION="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="91f9b603-cf60-4ce2-aa7c-00f07c35b671" name="Changes" comment="" />
@@ -42,6 +50,7 @@
       <option name="presentableId" value="Default" />
       <updated>1677573400434</updated>
       <workItem from="1677573401689" duration="813000" />
+      <workItem from="1677586430191" duration="410000" />
     </task>
     <servers />
   </component>
