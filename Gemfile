@@ -14,10 +14,8 @@ gem "sqlite3"
 
 gem "require_all"
 
-group :development do
   gem "rerun"
 
   gem "pry"
 
   gem 'puma'
-end
