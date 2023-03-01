@@ -9,6 +9,7 @@ class ApplicationController < Sinatra::Base
 
   post '/tasks' do
     tasks = Task.create(
+      task_name: params[:task_name],
       description: params[:description],
       due_date: params[:due_date],
       status: params[:status]
@@ -16,8 +17,8 @@ class ApplicationController < Sinatra::Base
     tasks.to_json
   end
 
-  patch '/tasks/:id' do
-    tasks = Task.find(params[:id])
+  patch '/tasks/:task_name' do
+    tasks = Task.find(params[:task_name])
     tasks.update(
       description: params[:description],
       due_date: params[:due_date]
@@ -25,10 +26,10 @@ class ApplicationController < Sinatra::Base
     tasks.to_json
   end
 
-  delete '/tasks/:id' do
-    task = Task.find(params[:id])
-    task.destroy
-    task.to_json
+  delete '/tasks/:task_name' do
+    tasks = Task.find(params[:task_name])
+    tasks.destroy
+    tasks.to_json
   end
 end
 
