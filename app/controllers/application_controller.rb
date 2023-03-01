@@ -5,6 +5,7 @@ class ApplicationController < Sinatra::Base
   get '/tasks' do
     tasks = Task.all
     tasks.to_json
+    "Hello world"
   end
 
   post '/tasks' do
@@ -30,6 +31,10 @@ class ApplicationController < Sinatra::Base
     tasks = Task.find(params[:task_name])
     tasks.destroy
     tasks.to_json
+  end
+
+  get '/login' do
+    erb :login
   end
 end
 
