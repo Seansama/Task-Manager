@@ -14,6 +14,8 @@ gem "rake"
 
 gem "sqlite3"
 
+gem "rack-cors"
+
 gem "require_all"
 
   gem "rerun"

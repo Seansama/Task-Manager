@@ -7,11 +7,15 @@ task :console do
   Pry.start
 end
 
+ENV["PORT"] ||= "9292"
+rackup = "rackup -p #{ENV['PORT']}"
+
+
 desc "Start the server"
 task :server do
   if ActiveRecord::Base.connection.migration_context.needs_migration?
     puts "Migrations are pending. Make sure to run `rake db:migrate` first."
     return
   end
-  exec "bundle exec rerun -b 'rackup config.ru'"
+  exec "bundle exec rerun -b '#{rackup}'"
 end
