@@ -6,6 +6,13 @@ class ApplicationController < Sinatra::Base
   set :database, "sqlite3:development.sqlite3"
 
   enable :sessions
+  #Route protection
+  before do
+    unless ['/login', '/signup'].include?(request.path_info) || session[:user_id]
+      redirect '/login'
+    end
+  end
+
   #sign up route
 
   get '/signup' do
@@ -43,6 +50,7 @@ class ApplicationController < Sinatra::Base
     redirect '/'
   end
 
+  #tasks routes
   get '/tasks' do
     tasks = Task.all
     tasks.to_json
