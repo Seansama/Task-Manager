@@ -6,6 +6,22 @@ class ApplicationController < Sinatra::Base
   set :database, "sqlite3:development.sqlite3"
 
   enable :sessions
+  #sign up route
+
+  get '/signup' do
+    erb :signup
+  end
+
+  post '/signup' do
+    @user = User.new(params[:user])
+    if @user.save
+      session[:user_id] = @user.id
+      redirect '/'
+    else
+      erb :signup
+    end
+  end
+
 
   get '/tasks' do
     tasks = Task.all
@@ -35,10 +51,6 @@ class ApplicationController < Sinatra::Base
     tasks = Task.find(params[:task_name])
     tasks.destroy
     tasks.to_json
-  end
-
-  get '/login' do
-    erb :login
   end
 end
 
