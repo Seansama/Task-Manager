@@ -37,7 +37,11 @@ class ApplicationController < Sinatra::Base
     end
   end
 
-
+  # logout route
+  get '/logout' do
+    session.clear
+    redirect '/'
+  end
 
   get '/tasks' do
     tasks = Task.all
