@@ -22,6 +22,22 @@ class ApplicationController < Sinatra::Base
     end
   end
 
+  #login Routes
+  get '/login' do
+    erb :login
+  end
+
+  post '/login' do
+    @user = User.find_by(username: params[:username])
+    if @user && @user.password == params[:password]
+      session[:user_id] = @user.id
+      redirect '/'
+    else
+      erb :login
+    end
+  end
+
+
 
   get '/tasks' do
     tasks = Task.all
