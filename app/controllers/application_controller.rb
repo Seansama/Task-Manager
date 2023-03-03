@@ -1,6 +1,11 @@
 require 'sinatra/activerecord'
+require 'sinatra'
+require 'sinatra/activerecord/rake'
 class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
+  set :database, "sqlite3:development.sqlite3"
+
+  enable :sessions
 
   get '/tasks' do
     tasks = Task.all
