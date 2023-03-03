@@ -10,13 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_03_01_130011) do
+ActiveRecord::Schema.define(version: 2023_03_03_072548) do
 
   create_table "tasks", force: :cascade do |t|
     t.text "description"
     t.date "due_date"
     t.boolean "status"
     t.string "task_name"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.text "username"
+    t.string "password"
   end
 
 end
