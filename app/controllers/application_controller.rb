@@ -5,6 +5,16 @@ class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
   set :database, "sqlite3:development.sqlite3"
 
+  #login
+  post '/login' do
+    user = User.find_by(
+      username: params[:username],
+      password: params[:password]
+    )
+    user.to_json
+  end
+
+
   #users
   get '/users' do
     users = User.all
