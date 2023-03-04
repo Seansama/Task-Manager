@@ -4,6 +4,8 @@ ruby "3.0.2"
 
 gem "sinatra"
 
+gem "faker"
+
 gem "activerecord"
 
 gem "sinatra-activerecord"

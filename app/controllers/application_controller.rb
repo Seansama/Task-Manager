@@ -22,12 +22,12 @@ class ApplicationController < Sinatra::Base
   end
 
   #tasks routes
-  get 'users/tasks' do
+  get '/tasks' do
     tasks = Task.all
     tasks.to_json
   end
 
-  post 'users/tasks' do
+  post '/tasks' do
     tasks = Task.create(
       task_name: params[:task_name],
       description: params[:description],
@@ -37,7 +37,7 @@ class ApplicationController < Sinatra::Base
     tasks.to_json
   end
 
-  patch 'users/tasks/:id' do
+  patch '/tasks/:id' do
     tasks = Task.find(params[:id])
     tasks.update(
       description: params[:description],
@@ -46,7 +46,7 @@ class ApplicationController < Sinatra::Base
     tasks.to_json
   end
 
-  delete 'users/tasks/:id' do
+  delete '/tasks/:user_id' do
     tasks = Task.find(params[:task_name])
     tasks.destroy
     tasks.to_json
