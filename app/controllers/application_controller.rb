@@ -5,58 +5,19 @@ class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
   set :database, "sqlite3:development.sqlite3"
 
-  enable :sessions
-  #Route protection
-  before do
-    unless ['/login', '/signup'].include?(request.path_info) || session[:user_id]
-      redirect '/login'
-    end
-  end
-
-  #sign up route
-
-  get '/signup' do
-    erb :signup
-  end
-
-  post '/signup' do
-    @user = User.new(params[:user])
-    if @user.save
-      session[:user_id] = @user.id
-      redirect '/'
-    else
-      erb :signup
-    end
-  end
-
-  #login Routes
-  get '/login' do
-    erb :login
-  end
-
-  post '/login' do
-    @user = User.find_by(username: params[:username])
-    if @user && @user.password == params[:password]
-      session[:user_id] = @user.id
-      redirect '/'
-    else
-      erb :login
-    end
-  end
-
-  # logout route
-  get '/logout' do
-    session.clear
-    redirect '/'
+  #users
+  get '/users' do
+    users = User.all
+    users.to_json
   end
 
   #tasks routes
-  get '/tasks' do
+  get 'users/tasks' do
     tasks = Task.all
     tasks.to_json
   end
 
-  post '/tasks' do
+  post 'users/tasks' do
     tasks = Task.create(
       task_name: params[:task_name],
       description: params[:description],
@@ -66,7 +27,7 @@ class ApplicationController < Sinatra::Base
     tasks.to_json
   end
 
-  patch '/tasks/:id' do
+  patch 'users/tasks/:id' do
     tasks = Task.find(params[:id])
     tasks.update(
       description: params[:description],
@@ -75,7 +36,7 @@ class ApplicationController < Sinatra::Base
     tasks.to_json
   end
 
-  delete '/tasks/:id' do
+  delete 'users/tasks/:id' do
     tasks = Task.find(params[:task_name])
     tasks.destroy
     tasks.to_json
