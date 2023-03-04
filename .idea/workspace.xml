@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91f9b603-cf60-4ce2-aa7c-00f07c35b671" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Task-Manager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Task-Manager.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +18,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2MMNH7yAGYyWKqHlJbJ0Q1FFyDZ" />
   <component name="ProjectViewState">
@@ -51,6 +55,8 @@
       <workItem from="1677573401689" duration="813000" />
       <workItem from="1677586430191" duration="3909000" />
       <workItem from="1677674800074" duration="6771000" />
+      <workItem from="1677749280604" duration="9456000" />
+      <workItem from="1677855433889" duration="1974000" />
     </task>
     <servers />
   </component>
