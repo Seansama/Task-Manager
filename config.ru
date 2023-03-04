@@ -7,7 +7,5 @@ use Rack::Cors do
   end
 end
 
-
 use Rack::JSONBodyParser
-
 run ApplicationController
