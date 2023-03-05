@@ -1,8 +1,3 @@
-require 'sinatra/activerecord'
-require 'sinatra'
-require 'sinatra/activerecord/rake'
-require 'json'
-
 class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
   set :database, "sqlite3:development.sqlite3"
