@@ -5,13 +5,49 @@ class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
   set :database, "sqlite3:development.sqlite3"
 
+  before do
+    unless ['/', '/signup'].include?(request.path_info) || session[:user_id]
+      redirect '/'
+    end
+  end
+
+  #signup
+
+  post '/signup' do
+    users = User.create(
+      username: params[:username],
+      email: params[:email],
+    password: params[:password]
+    )
+    users.to_json
+  end
+
+
+  # Enable sessions
+  enable :sessions
+
+  # Create a route for logging out
+  get '/logout' do
+    # Clear the session
+    session.clear
+    # Redirect to the Login page
+    redirect '/login'
+  end
+
+  get '/' do
+    erb :login
+  end
   #login
-  post '/login' do
+  post '/' do
     user = User.find_by(
       username: params[:username],
       password: params[:password]
     )
-    user.to_json
+    if user
+      redirect "/home"
+    else
+      user.to_json
+    end
   end
 
 
@@ -32,7 +68,7 @@ class ApplicationController < Sinatra::Base
       task_name: params[:task_name],
       description: params[:description],
       due_date: params[:due_date],
-      status: params[:status => "Complete"] || false
+      status: params[:status]
     )
     tasks.to_json
   end
@@ -46,8 +82,8 @@ class ApplicationController < Sinatra::Base
     tasks.to_json
   end
 
-  delete '/tasks/:user_id' do
-    tasks = Task.find(params[:task_name])
+  delete '/tasks/:id' do
+    tasks = Task.find(params[:id])
     tasks.destroy
     tasks.to_json
   end

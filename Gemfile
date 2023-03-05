@@ -6,6 +6,8 @@ gem "sinatra"
 
 gem "faker"
 
+gem "rack-contrib"
+
 gem "activerecord"
 
 gem "sinatra-activerecord"
