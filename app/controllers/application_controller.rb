@@ -1,61 +1,21 @@
 require 'sinatra/activerecord'
 require 'sinatra'
 require 'sinatra/activerecord/rake'
+require 'json'
+
 class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
   set :database, "sqlite3:development.sqlite3"
-
-  before do
-    unless ['/', '/signup'].include?(request.path_info) || session[:user_id]
-      redirect '/'
-    end
-  end
-
-  #signup
-
-  post '/signup' do
-    users = User.create(
-      username: params[:username],
-      email: params[:email],
-    password: params[:password]
-    )
-    users.to_json
-  end
-
-
-  # Enable sessions
-  enable :sessions
-
-  # Create a route for logging out
-  get '/logout' do
-    # Clear the session
-    session.clear
-    # Redirect to the Login page
-    redirect '/login'
-  end
-
-  get '/' do
-    erb :login
-  end
-  #login
-  post '/' do
-    user = User.find_by(
-      username: params[:username],
-      password: params[:password]
-    )
+  #login route
+  post '/login' do
+    user = User.find_by(username: params[:username], password: params[:password])
     if user
       redirect "/home"
     else
-      user.to_json
+      pp "Login failed"
     end
   end
 
-
-  #users
-  get '/users' do
-    users = User.all
-    users.to_json
-  end
 
   #tasks routes
   get '/tasks' do

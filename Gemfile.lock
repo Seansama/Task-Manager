@@ -19,6 +19,7 @@ GEM
     ffi (1.15.5)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
+    json (2.5.1)
     listen (3.8.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -67,6 +68,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord
   faker
+  json
   pry
   puma
   rack-contrib

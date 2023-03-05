@@ -12,6 +12,8 @@ gem "activerecord"
 
 gem "sinatra-activerecord"
 
+gem 'json'
+
 gem "rack-contrib"
 
 gem "rake"
