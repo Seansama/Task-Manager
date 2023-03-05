@@ -3,12 +3,17 @@
 ### Project Description
 Keeping track of your day-to-day tasks can be daunting and tiring. This project aims to do away with that hassle by helping you keep organised.
 
+### Client side live link and repo
+- **Live-link** - https://task-manager-react-seven.vercel.app/
+- **Repository** - https://github.com/Seansama/task-manager-React
+
 ### Setup
 
 1. Clone this project by typing in `git@github.com:Seansama/Task-Manager.git` into a bash terminal.
 2. Navigate into the project folder.
 3. Install the dependencies in the Gemfile by typing `bundle install` into the command line.
 4. Run rackup `config.ru` to start up the backend.
+5. Then open the front end [here](https://task-manager-react-seven.vercel.app/)
 
 ### File structure
 
