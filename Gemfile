@@ -14,8 +14,6 @@ gem "sinatra-activerecord"
 
 gem 'json'
 
-gem "rack-contrib"
-
 gem "rake"
 
 gem "sqlite3"
