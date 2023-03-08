@@ -1,4 +1,7 @@
 require_relative './config/environment'
+require 'active_record'
+
+#ActiveRecord::Base.establish_connection(ENV['DATABASE_URL']|| 'https://task-manager-production-9d27.up.railway.app/')
 # Allow CORS (Cross-Origin Resource Sharing) requests
 use Rack::Cors do
   allow do
